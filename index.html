@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Daily Video YouTube Uploader の用途とデータの扱いを説明します。">
+  <meta name="google-site-verification" content="DC_JT9OtznzdcwXBxX5tP7ejILFLYnPpgxCS5X9ggpE">
+  <title>説明 | Daily Video YouTube Uploader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="site-name" href="index.html">Daily Video YouTube Uploader</a>
+    <nav aria-label="サイト内ナビゲーション">
+      <ul>
+        <li><a href="index.html" aria-current="page">説明</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="terms.html">利用条件</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="content">
+    <h1>このアプリについて</h1>
+    <p>Daily Video YouTube Uploader は、所有者本人が自分のYouTubeチャンネルへ動画を投稿するための、個人用コマンドラインアプリです。一般向けの投稿サービスではありません。</p>
+
+    <h2>投稿の流れ</h2>
+    <p>アプリは完成動画をまず非公開でYouTubeへアップロードします。動画の処理状態と制作時の品質確認を確認し、著作権の申し立てはYouTube Studioで確認します。必要な確認がそろった後、同じ動画をYouTube Data APIで公開状態に変更し、公開状態を読み戻して確認します。</p>
+    <p>APIの処理完了は著作権チェックの代わりにはなりません。確認が不足している場合や、処理・権利上の問題を検出した場合は公開せず保留します。</p>
+
+    <h2>データの送信先</h2>
+    <p>動画ファイルと投稿用のタイトル・説明などは、投稿先であるYouTubeへ送信され、YouTubeの処理と保存を受けます。OAuth認証はGoogleを通じて行います。アプリは自分のチャンネル確認、動画のアップロード、状態確認、公開状態の変更に必要なYouTubeの権限を要求します。</p>
+    <p>運用記録には動画ID、ファイルのSHA-256、公開状態、確認時刻、確認証拠の場所などが含まれます。運用にCodexを使う場合、作業に必要なCLI結果や確認記録をCodexで扱うことがあります。認証秘密はこのPCのWindows DPAPIで暗号化して保存し、通常のCLI出力には表示しません。</p>
+    <p>この案内サイトは、動画、OAuth情報、フォーム入力を収集しません。アクセス解析や広告用の計測機能も設けていません。サイトの配信にはGitHub Pagesを使います。GitHubはページ配信に伴いIPアドレスなどの接続情報を処理する場合があります。詳しくは<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーに関する声明</a>を確認してください。</p>
+
+    <h2>Googleデータの利用</h2>
+    <p>Googleユーザーデータは、本人のYouTube投稿とその状態確認に必要な範囲で扱います。このアプリにGoogleユーザーデータを広告や生成AIの学習に使う機能はありません。Google API Services User Data PolicyのLimited Use要件に従います。</p>
+    <p>Googleアカウントの接続と権限は<a href="https://myaccount.google.com/connections">Googleアカウントの接続済みアプリ</a>から確認・取り消しできます。取り消し後は、アプリからGoogle APIを利用できなくなります。</p>
+
+    <p>データの詳しい扱いは<a href="privacy.html">プライバシーポリシー</a>、利用範囲は<a href="terms.html">利用条件</a>をご覧ください。</p>
+    <p>連絡先：<a href="https://github.com/gangbenhui98-dot">GitHubプロフィール</a></p>
+    <p class="note">このアプリは個人用の独立したツールであり、GoogleまたはYouTubeの公式アプリではありません。</p>
+  </main>
+</body>
+</html>

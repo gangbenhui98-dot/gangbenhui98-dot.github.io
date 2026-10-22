@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Daily Video YouTube Uploader が扱う情報、保存先、削除方法を説明します。">
+  <title>プライバシーポリシー | Daily Video YouTube Uploader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="site-name" href="index.html">Daily Video YouTube Uploader</a>
+    <nav aria-label="サイト内ナビゲーション">
+      <ul>
+        <li><a href="index.html">説明</a></li>
+        <li><a href="privacy.html" aria-current="page">プライバシーポリシー</a></li>
+        <li><a href="terms.html">利用条件</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" class="content">
+    <h1>プライバシーポリシー</h1>
+    <p>このポリシーは、個人用アプリ Daily Video YouTube Uploader と、この案内サイトにおける情報の扱いを説明します。</p>
+
+    <h2>アプリが扱う情報</h2>
+    <ul>
+      <li><strong>Google OAuth情報とローカル台帳：</strong>Googleへの認証に使うクライアント設定、更新トークン、投稿再開用の台帳を、このPCの <code>%LOCALAPPDATA%\CodexYouTubeUploader</code> に保存します。認証秘密はWindows DPAPIのCurrentUserで暗号化します。アクセス用トークンはAPI通信に使います。</li>
+      <li><strong>投稿データ：</strong>選択した動画ファイルと、タイトル・説明などの投稿情報をYouTubeへ送信します。YouTubeは動画を処理・保存し、アプリから指示された場合は公開状態を変更します。</li>
+      <li><strong>結果と確認証拠：</strong>動画IDや公開状態を含む結果JSON、Studio確認の画像などは、制作フォルダーの <code>daily-video/out/YYYY-MM-DD</code> に保存します。このPCではフォルダーがOneDrive配下にあるため、OneDriveの同期設定に応じて同期先にも保存されます。</li>
+      <li><strong>運用要約：</strong>運用にCodexを使う場合、必要な動画ID・状態・確認内容などの要約が、本人のGoogle Driveの判断記録やCodexの会話にも残ることがあります。Codexでの運用時に、作業に必要なCLI結果や確認記録をCodexが扱う場合もあります。OAuth秘密はCLIの通常出力に表示せず、チャットへ貼り付けない運用です。</li>
+    </ul>
+
+    <h2>利用目的と第三者サービス</h2>
+    <p>Googleユーザーデータは、本人のYouTubeチャンネル確認、動画の非公開アップロード、処理状態の確認、公開状態の変更に必要な範囲で利用します。Googleユーザーデータを広告や生成AIの学習に使う機能はありません。Google API Services User Data Policyの<a href="https://developers.google.com/terms/api-services-user-data-policy">Limited Use要件</a>に従います。</p>
+    <p>Googleの認証・YouTube APIの利用にはGoogleおよびYouTubeのサービスが関わります。Codexを使った場合はCodexも作業情報の処理に関わります。それぞれのサービスの情報処理については、各サービスの説明をご確認ください。<a href="https://policies.google.com/privacy">Googleプライバシーポリシー</a>、<a href="https://www.youtube.com/t/terms">YouTube利用規約</a>。</p>
+    <p>この案内サイトは静的ページで、フォーム、Cookie設定、広告、アクセス解析を実装していません。GitHub Pagesでページを配信するため、GitHubがIPアドレスなどの接続情報を処理する場合があります。詳細は<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーに関する声明</a>をご覧ください。</p>
+
+    <h2>保存期間と削除</h2>
+    <p>アプリには記録の定期自動削除機能はありません。認証情報と運用記録は、本人が削除するまで保存します。外部サービスの保持期間は各サービスの設定・ポリシーによります。</p>
+    <p>認証秘密と投稿再開用の台帳を削除するには、アプリを終了し、エクスプローラーのアドレス欄に <code>%LOCALAPPDATA%\CodexYouTubeUploader</code> を入力して、そのフォルダーを削除してください。次回のAPI利用には再設定と認証が必要になり、ローカルの再開記録も失われます。</p>
+    <p>結果JSONやStudio画像を削除する場合は、制作フォルダーの該当する <code>daily-video/out/YYYY-MM-DD</code> と、OneDriveなど設定した同期先にあるコピーを確認して削除してください。Google Driveの判断記録やCodex会話に残った運用要約は、それぞれのサービスで別途確認して削除してください。</p>
+    <p>これらの削除は、Googleアカウントの接続権限やYouTube上の動画を削除しません。接続権限は<a href="https://myaccount.google.com/connections">Googleアカウントの接続済みアプリ</a>から別途取り消してください。アップロード済み動画はYouTube上に残り、このアプリには動画を削除する機能がありません。</p>
+
+    <h2>問い合わせ</h2>
+    <p>このアプリは所有者本人が利用します。連絡先は<a href="https://github.com/gangbenhui98-dot">GitHubプロフィール</a>です。</p>
+    <p class="updated">更新日：2026年10月22日</p>
+  </main>
+</body>
+</html>
